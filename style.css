@@ -88,3 +88,119 @@ body {
 .nav-list img {
   width: 24px;
 }
+
+/* ----- Avatars (circles with initials) ----- */
+.avatar {
+  display: grid;
+  place-items: center; /* centers the initials */
+  border-radius: 50%;
+  background-color: var(--color);
+  color: #111;
+  font-weight: 700;
+}
+
+.avatar-small {
+  width: 48px;
+  height: 48px;
+}
+
+.avatar-large {
+  width: 72px;
+  height: 72px;
+  font-size: 24px;
+}
+
+/* ----- Header ----- */
+.header {
+  display: grid;
+  gap: 16px;
+  padding: 16px 48px 24px;
+}
+
+.header-top,
+.header-bottom {
+  display: grid;
+  grid-template-columns: 1fr auto; /* left side grows, right side fits its content */
+  align-items: center;
+  gap: 48px;
+}
+
+.search {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 16px;
+}
+
+/* SVG icons need a set width, or they shrink to nothing inside a grid */
+.search img,
+.user-info .icon {
+  width: 28px;
+}
+
+.search input {
+  max-width: 600px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 16px;
+  background-color: #e2e8f0;
+  font-size: 16px;
+}
+
+.search input:focus {
+  outline: 2px solid #1992d4;
+}
+
+.user-info {
+  display: grid;
+  grid-auto-flow: column; /* put items side by side */
+  align-items: center;
+  gap: 24px;
+}
+
+.user-name {
+  font-weight: 700;
+}
+
+.greeting {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 24px;
+}
+
+.greeting p {
+  margin: 0;
+}
+
+.hi {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.header-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.header-buttons button {
+  padding: 10px 28px;
+  border: none;
+  border-radius: 24px;
+  background-color: #1992d4;
+  color: #fff;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.header-buttons button:hover {
+  background-color: #147ab3;
+}

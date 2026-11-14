@@ -1,3 +1,36 @@
-h1 {
-  color: steelblue;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  color: #111;
+  background-color: #e2e8f0;
+
+  /* The page skeleton: sidebar on the left, header + main on the right */
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main";
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #1992d4;
+  color: #fff;
+}
+
+.header {
+  grid-area: header;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+  z-index: 1; /* keep the shadow on top of main */
+}
+
+.main {
+  grid-area: main;
 }
